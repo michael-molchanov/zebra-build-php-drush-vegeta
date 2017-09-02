@@ -18,6 +18,7 @@ RUN apk add --update --no-cache \
   libpng \
   libxml2 \
   libxslt \
+  procps \
   tar \
   unzip \
   wget \
