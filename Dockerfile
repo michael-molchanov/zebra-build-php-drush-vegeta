@@ -27,7 +27,7 @@ RUN apk add --update --no-cache \
 
 # Install Vegeta
 ENV VEGETA_VERSION 12.8.3
-RUN curl -fsSL -o ~/vegeta.tar.gz https://github.com/tsenart/vegeta/releases/download/${VEGETA_VERSION}/vegeta-${VEGETA_VERSION}-linux-amd64.tar.gz \
+RUN curl -fsSL -o ~/vegeta.tar.gz https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta-${VEGETA_VERSION}-linux-amd64.tar.gz \
   && tar -C ~ -xzf ~/vegeta.tar.gz \
   && rm ~/vegeta.tar.gz \
   && mv ~/vegeta /usr/local/bin/vegeta
