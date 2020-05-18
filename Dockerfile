@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.11
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
@@ -26,7 +26,7 @@ RUN apk add --update --no-cache \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Vegeta
-ENV VEGETA_VERSION v12.8.3
+ENV VEGETA_VERSION 12.8.3
 RUN curl -fsSL -o ~/vegeta.tar.gz https://github.com/tsenart/vegeta/releases/download/${VEGETA_VERSION}/vegeta-${VEGETA_VERSION}-linux-amd64.tar.gz \
   && tar -C ~ -xzf ~/vegeta.tar.gz \
   && rm ~/vegeta.tar.gz \
